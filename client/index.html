@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Prediction Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="logo">
+    <img src="photos/Blue Illustrative College School Logo1.png" alt="Logo">
+</div>
+
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#prediction">Prediction</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Home</h2>
+    <div class="content-container">
+        <img src="photos/aesthetic.jpg" alt="Project Illustration">
+        <div class="content">
+            <p>Discover a world of possibilities with our cutting-edge machine learning tools. Our platform is designed to simplify complex data prediction processes, making advanced analytics accessible to everyone.</p>
+            <p>Whether you're a researcher, a developer, or just curious about machine learning, our website offers intuitive features to help you explore, analyze, and predict with ease.</p>
+        </div>
+    </div>
+</section>
+
+<section id="prediction">
+    <h2>Prediction</h2>
+    <form>
+        <label for="method">Select Method:</label>
+        <select id="method" name="method">
+            <option value="linear">Linear Regression</option>
+            <option value="tree">Decision Tree</option>
+            <option value="svm">SVM</option>
+        </select>
+        <br>
+        <label for="input-data">Enter Your Data:</label>
+        <textarea id="input-data" name="input-data" rows="5" cols="30" placeholder="Enter data..."></textarea>
+        <br>
+        <button type="button" onclick="performPrediction()">Submit</button>
+    </form>
+    <p id="result"></p>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <div class="content-container">
+        <div class="photo-container">
+            <div class="photo">
+                <img src="photos/yaryna.jpg" alt="Yaryna">
+                <p>Yaryna</p>
+            </div>
+            <div class="photo">
+                <img src="photos/orest.jpg" alt="Orest">
+                <p>Orest</p>
+            </div>
+        </div>
+        <div class="content">
+            <p>This project was made by third-course students of department of AI.  </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="content-container">
+        <p>Email: mlproject@example.com</p>
+        <p>Phone: +123 456 7890</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 ML Prediction</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
