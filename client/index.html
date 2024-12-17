@@ -35,14 +35,51 @@
 <section id="prediction">
     <h2>Prediction</h2>
     <form>
-        <label for="method">Select Method:</label>
-        <select id="method" name="method">
-            <option value="random_forest">Random Forest</option>
-        </select>
-        <br>
-        <label for="input-data">Enter Your Data:</label>
-        <textarea id="input-data" name="input-data" rows="5" cols="30" placeholder="Enter data..."></textarea>
-        <br>
+        <label for="g1">G1 (0-20):</label>
+        <input type="number" id="g1" min="0" max="20" placeholder="Enter G1"><br>
+
+        <label for="g2">G2 (0-20):</label>
+        <input type="number" id="g2" min="0" max="20" placeholder="Enter G2"><br>
+
+        <label for="medu">Mother's Education:</label>
+        <select id="medu">
+            <option value="0">None</option>
+            <option value="1">Primary (4th grade)</option>
+            <option value="2">5th to 9th grade</option>
+            <option value="3">Secondary</option>
+        </select><br>
+
+        <label for="fedu">Father's Education:</label>
+        <select id="fedu">
+            <option value="0">None</option>
+            <option value="1">Primary (4th grade)</option>
+            <option value="2">5th to 9th grade</option>
+            <option value="3">Secondary</option>
+        </select><br>
+
+        <label for="failures">Failures (0-4):</label>
+        <input type="number" id="failures" min="0" max="4" placeholder="Enter failures"><br>
+
+        <label for="studytime">Study Time:</label>
+        <select id="studytime">
+            <option value="1">&lt;2 hours</option>
+            <option value="2">2 to 5 hours</option>
+            <option value="3">5 to 10 hours</option>
+            <option value="4">&gt;10 hours</option>
+        </select><br>
+
+        <label for="internet_yes">Internet Access:</label>
+        <select id="internet_yes">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="higher_yes">Higher Education Desire:</label>
+        <select id="higher_yes">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
         <button type="button" onclick="performPrediction()">Submit</button>
     </form>
     <p id="result"></p>

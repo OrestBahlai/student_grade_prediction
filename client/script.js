@@ -1,20 +1,20 @@
 function performPrediction() {
-    const method = document.getElementById('method').value; // Обраний метод
-    const data = document.getElementById('input-data').value; // Дані введені користувачем
+    const g1 = document.getElementById('g1').value.trim();
+    const g2 = document.getElementById('g2').value.trim();
+    const medu = document.getElementById('medu').value.trim();
+    const fedu = document.getElementById('fedu').value.trim();
+    const failures = document.getElementById('failures').value.trim();
+    const studytime = document.getElementById('studytime').value.trim();
+    const internet_yes = document.getElementById('internet_yes').value.trim();
+    const higher_yes = document.getElementById('higher_yes').value.trim();
 
-    if (!data) {
-        document.getElementById('result').innerText = 'Please provide input data.';
+    if (!g1 || !g2 || !medu || !fedu || !failures || !studytime || !internet_yes || !higher_yes) {
+        document.getElementById('result').innerText = 'Please fill in all fields.';
         return;
     }
 
-    // Парсимо введені дані у форматі g1, g2 тощо
-    const input = data.split(',').map(val => val.trim());
-    if (input.length !== 8) {
-        document.getElementById('result').innerText = 'Invalid input format. Provide 8 comma-separated values.';
-        return;
-    }
+    const input = [g1, g2, medu, fedu, failures, studytime, internet_yes, higher_yes];
 
-    // Формуємо тіло POST-запиту
     const formData = new FormData();
     formData.append('g1', input[0]);
     formData.append('g2', input[1]);
@@ -25,8 +25,7 @@ function performPrediction() {
     formData.append('internet_yes', input[6]);
     formData.append('higher_yes', input[7]);
 
-    // Відправка POST-запиту на Flask сервер
-    fetch('http://127.0.0.1:5000/predict_grade', { // Оновлений URL
+    fetch('http://127.0.0.1:5000/predict_grade', { // URL до Flask
         method: 'POST',
         body: formData
     })
