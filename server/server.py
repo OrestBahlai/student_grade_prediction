@@ -5,6 +5,7 @@ app = Flask(__name__)
 @app.route('/predict_grade', methods=['POST'])
 def predict_grade():
 
+    model_name = request.form['model_name']
     g1 = int(request.form['g1'])
     g2 = int(request.form['g2'])
     medu = int(request.form['medu'])
@@ -14,8 +15,9 @@ def predict_grade():
     internet_yes = request.form['internet_yes']
     higher_yes = request.form['higher_yes']
 
+    predicted_grade = util.get_predicted_grade(model_name, g1, g2, medu, higher_yes, fedu, failures, studytime, internet_yes)
     response = jsonify({
-        'predicted_grade': util.get_predicted_grade(g1, g2, medu, higher_yes, fedu, failures, studytime, internet_yes)
+        'predicted_grade': float(predicted_grade)
     })
 
     response.headers.add('Access-Control-Allow-Origin', '*')
