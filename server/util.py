@@ -13,15 +13,15 @@ def load_saved_artifacts():
 
     global __rf_model, __xgb_model, __dt_model
 
-    with open("/Users/orest/Documents/study/Курсова/grade_prediction/model/random_forest_model.pkl", "rb") as file:
+    with open("./model/random_forest_model.pkl", "rb") as file:
         __rf_model = pickle.load(file)
         print("Random Forest model loaded successfully")
 
-    with open("/Users/orest/Documents/study/Курсова/grade_prediction/model/xgb_regressor_model.pkl", "rb") as file:
+    with open("./model/xgb_regressor_model.pkl", "rb") as file:
         __xgb_model = pickle.load(file)
         print("XGB Regressor model loaded successfully")
 
-    with open("/Users/orest/Documents/study/Курсова/grade_prediction/model/decision_tree_model.pkl", "rb") as file:
+    with open("./model/decision_tree_model.pkl", "rb") as file:
         __dt_model = pickle.load(file)
         print("Decision Tree model loaded successfully")
 
