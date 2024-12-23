@@ -222,5 +222,5 @@ form button:hover {
 }
 
 input[type="number"], select {
-    max-width: 100%; /* Запобігає виходу елементів за межі */
+    max-width: 100%;
 }
