@@ -8,9 +8,11 @@ The **Student Grade Prediction** project uses machine learning techniques to pre
 2. [Installation](#installation)
 3. [Dependencies](#dependencies)
 4. [Usage](#usage)
+5. [Dataset](#dataset)
 
 ## Project Description
 This project predicts student grades using machine learning models, specifically trained on datasets containing information about student behavior and academic history. The objective is to provide an automated system that can forecast grades, helping educators identify students in need of additional support.
+
 
 ## Installation
 
@@ -46,3 +48,7 @@ sudo apt-get install libomp-dev
 python server/server.py
 ```
 * Access the Application: Once the server is running, open the `index.html` file in your browser. You can do this either through the console or directly in your working environment.
+
+## Dataset
+
+Dataset - Student Performance Data Set (https://www.kaggle.com/datasets/larsen0966/student-performance-data-set).
